@@ -15,6 +15,23 @@ class CategorySerializer(serializers.ModelSerializer):
         return data
 
 
+
+# class ItemSerializer(serializers.ModelSerializer):
+#     id = serializers.IntegerField()
+#
+#     class Meta:
+#         model = Item
+#         fields = '__all__'
+#
+#     def validate(self, data):
+#         print(data)
+#         a = "{}C{}P{}I".format(data['category_id'], data['price'], data['id'])
+#         print(a)
+#         if data['qr'] != "{}C{}P{}I".format(data['category_id'].id, data['price'], data['id']):
+#             raise serializers.ValidationError("QR код не соответствует стандартам")
+#
+#         return data
+
 class ItemSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField()
 
